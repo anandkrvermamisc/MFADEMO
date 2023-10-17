@@ -17,7 +17,7 @@ const devConfig = {
     },
     plugins: [
       new ModuleFederationPlugin({
-        name: 'Widgets',
+        name: 'products',
         filename: 'remoteEntry.js',
         exposes: {},
         // shared: dependencies,

@@ -17,7 +17,7 @@ const devConfig = {
     },
     plugins: [
       new ModuleFederationPlugin({
-        name: 'Widgets',
+        name: 'widgets',
         filename: 'remoteEntry.js',
         exposes: {
           './WidgetCounter': './src/components/Counter',

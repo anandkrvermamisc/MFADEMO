@@ -4,14 +4,14 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import About from './components/About';
 import Counter  from './components/Counter';
 import ShoppingCart from './components/ShoppingCart';
-import Header from './components/WidgetHeader';
+import WidgetHeader from './components/WidgetHeader';
 
 const App = () => {
     return (
       <>
         <div>
           <Router >
-              <Header/>
+              <WidgetHeader/>
               <Routes>
                   <Route exact path="/about" element={<About />} />
                   <Route exact path="/cart" element={<ShoppingCart itemCount={10} />} />
