@@ -7,8 +7,8 @@
         {
             "type": "chrome",
             "request": "launch",
-            "name": "Debug Cart",
-            "url": "http://localhost:5001",
+            "name": "Debug Widget",
+            "url": "http://localhost:5003",
             "webRoot": "${workspaceFolder}\\src"
         }
     ]
