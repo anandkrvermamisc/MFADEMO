@@ -1,5 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { Counter } from 'widgets/WidgetCounter';
+
 
 function Product({id})
 {
@@ -31,6 +33,7 @@ function Product({id})
                 ))}
                 </tbody>
             </table>
+            <Counter />
         </div>
     );
 }

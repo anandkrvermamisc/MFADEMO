@@ -7,10 +7,10 @@ const dependencies = require('../package.json').dependencies;
 const devConfig = {
     mode: 'development',
     output:{
-        publicPath: 'http://localhost:5003/',
+        publicPath: 'http://localhost:3001/',
     },
     devServer: {
-      port: 5003,
+      port:3001,
       historyApiFallback: {
         index: 'index.html',
       },
@@ -18,10 +18,10 @@ const devConfig = {
     plugins: [
       new ModuleFederationPlugin({
         name: 'widgets',
-        filename: 'remoteEntry.js',
+        filename: 'widgetsRemoteEntry.js',
         exposes: {
-          './WidgetCounter': './src/components/Counter',
-          './WidgetCart': './src/components/ShoppingCart',
+          './WidgetCounter': './src/components/Counter.js',
+          './WidgetCart': './src/components/ShoppingCart.js',
         },
         // shared: dependencies,
       }),

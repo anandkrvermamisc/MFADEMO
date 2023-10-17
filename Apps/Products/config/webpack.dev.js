@@ -7,10 +7,10 @@ const dependencies = require('../package.json').dependencies;
 const devConfig = {
     mode: 'development',
     output:{
-        publicPath: 'http://localhost:5002/',
+        publicPath: 'http://localhost:3000/',
     },
     devServer: {
-      port: 5002,
+      port:3000,
       historyApiFallback: {
         index: 'index.html',
       },
@@ -18,8 +18,10 @@ const devConfig = {
     plugins: [
       new ModuleFederationPlugin({
         name: 'products',
-        filename: 'remoteEntry.js',
-        exposes: {},
+        filename: 'productsRemoteEntry.js',
+        remotes: {
+            widgets: 'widgets@http://localhost:3001/widgetsRemoteEntry.js'
+        },
         // shared: dependencies,
       }),
     ],
