@@ -8,21 +8,21 @@
             "type": "chrome",
             "request": "launch",
             "name": "Debug Host",
-            "url": "http://localhost:5000",
+            "url": "http://localhost:3002",
             "webRoot": "${workspaceFolder}\\Host\\src"
         },
         {
             "type": "chrome",
             "request": "launch",
             "name": "Debug Product",
-            "url": "http://localhost:5002",
+            "url": "http://localhost:3001",
             "webRoot": "${workspaceFolder}\\Product\\src"
         },
         {
             "type": "chrome",
             "request": "launch",
             "name": "Debug Widget",
-            "url": "http://localhost:5003",
+            "url": "http://localhost:3000",
             "webRoot": "${workspaceFolder}\\Widget\\src"
         },
     ]

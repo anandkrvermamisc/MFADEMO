@@ -7,10 +7,10 @@ const dependencies = require('../package.json').dependencies;
 const devConfig = {
     mode: 'development',
     output:{
-        publicPath: 'http://localhost:3000/',
+        publicPath: 'http://localhost:3001/',
     },
     devServer: {
-      port:3000,
+      port:3001,
       historyApiFallback: {
         index: 'index.html',
       },
@@ -20,7 +20,7 @@ const devConfig = {
         name: 'products',
         filename: 'productsRemoteEntry.js',
         remotes: {
-            widgets: 'widgets@http://localhost:3001/widgetsRemoteEntry.js'
+            widgets: 'widgets@http://localhost:3000/widgetsRemoteEntry.js'
         },
         shared: { react: { singleton: true }, "react-dom": { singleton: true } },
       }),
