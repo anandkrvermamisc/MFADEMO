@@ -1,9 +1,8 @@
-import React from 'react'
+import React, { Suspense, useState }  from 'react'
 import { Link } from 'react-router-dom'
-import { Counter } from 'widgets/WidgetCounter';
+import  Counter from 'widgets/WidgetCounter';
 
-
-function Product({id})
+function Products()
 {
     const productsList = [
         { id: 1, name: 'Speaker', price: 150, currency: 'GBP' },
@@ -28,14 +27,17 @@ function Product({id})
                         </td> 
                         <td>{item.price}</td>
                         <td>{item.currency}</td>
-                        <td>Quantity</td>
+                        <td>
+                            <Suspense fallback={<h2>🌀 Loading...</h2>}>
+                                <Counter/>
+                            </Suspense>
+                        </td>
                     </tr>
                 ))}
                 </tbody>
             </table>
-            <Counter />
         </div>
     );
 }
 
-export default Product;
+export default Products;

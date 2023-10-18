@@ -24,24 +24,26 @@ function Product()
     }, []);
     
     return(
-        <div>
-            <table>
-                <tbody>
-                    <tr>
-                        <td>Product ID</td><td>{productDetail.id}</td>
-                    </tr>
-                    <tr>
-                        <td>Name</td><td>{productDetail.name}</td>
-                    </tr>
-                    <tr>
-                        <td>Price</td><td>{productDetail.price}</td>
-                    </tr>
-                    <tr>
-                        <td>currency</td><td>{productDetail.currency}</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+        <>
+            <div>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>Product ID</td><td>{productDetail.id}</td>
+                        </tr>
+                        <tr>
+                            <td>Name</td><td>{productDetail.name}</td>
+                        </tr>
+                        <tr>
+                            <td>Price</td><td>{productDetail.price}</td>
+                        </tr>
+                        <tr>
+                            <td>currency</td><td>{productDetail.currency}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </>
     );
 }
 

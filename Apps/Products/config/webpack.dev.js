@@ -22,7 +22,7 @@ const devConfig = {
         remotes: {
             widgets: 'widgets@http://localhost:3001/widgetsRemoteEntry.js'
         },
-        // shared: dependencies,
+        shared: { react: { singleton: true }, "react-dom": { singleton: true } },
       }),
     ],
 }

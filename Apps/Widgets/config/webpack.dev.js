@@ -20,10 +20,10 @@ const devConfig = {
         name: 'widgets',
         filename: 'widgetsRemoteEntry.js',
         exposes: {
-          './WidgetCounter': './src/components/Counter.js',
-          './WidgetCart': './src/components/ShoppingCart.js',
+          './WidgetCounter': './src/components/Counter',
+          './WidgetCart': './src/components/ShoppingCart',
         },
-        // shared: dependencies,
+        shared: { react: { singleton: true }, "react-dom": { singleton: true } },
       }),
     ],
 }
