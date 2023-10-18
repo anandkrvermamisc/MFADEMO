@@ -1,0 +1,1 @@
+import ('./bootstrap').catch(error => console.log('One or more dependencies are down'));

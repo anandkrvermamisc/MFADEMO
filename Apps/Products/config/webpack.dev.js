@@ -22,6 +22,9 @@ const devConfig = {
         remotes: {
             widgets: 'widgets@http://localhost:3000/widgetsRemoteEntry.js'
         },
+        exposes: {
+          './ProductApp': './src/bootstrap',
+        },
         shared: { react: { singleton: true }, "react-dom": { singleton: true } },
       }),
     ],
