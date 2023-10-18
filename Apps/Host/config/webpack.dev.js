@@ -20,6 +20,10 @@ const devConfig = {
         name: 'host',
         filename: 'hostRemoteEntry.js',
         exposes: {},
+        remotes: {
+          widgets: 'widgets@http://localhost:3000/widgetsRemoteEntry.js',
+          products: 'products@http://localhost:3001/productsRemoteEntry.js',
+        },
         shared: { react: { singleton: true }, "react-dom": { singleton: true } },
       }),
     ],

@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HostHeader  from './components/HostHeader';
 import About from './components/About';
 import Home from './components/Home';
+import ProductApp from './components/remotes/ProductApp'; 
 
 const App = () => {
     return (
@@ -13,6 +14,7 @@ const App = () => {
                 <HostHeader/>
             </div>
             <Routes>
+                <Route exact path="/products" element={<ProductApp />} />
                 <Route exact path="/about" element={<About />} />
                 <Route path="/" element={<Home />} />
             </Routes>
